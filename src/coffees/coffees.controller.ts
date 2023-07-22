@@ -6,4 +6,9 @@ export class CoffeesController {
   fetchAll() {
     return 'All the coffees';
   }
+
+  @Get(':id')
+  getOne(@Param('id') id: string) {
+    return `Get coffee with id ${id}`;
+  }
 }
